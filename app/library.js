@@ -1,12 +1,13 @@
 // Person Object (superclass)
 function Person(fname,lname, email){ 
+	this.debt = 0.0;
 	this.fname=fname;
 	this.lname=lname;
 	this.email=email;
 
 	//encapsulation
 	this.fullname=function(){
-	  return this.fname +" "+ this.lname;
+	  return (this.fname +" "+ this.lname);
 	}
 
 }
@@ -22,13 +23,25 @@ function Person(fname,lname, email){
 	Employee.prototype = Object.create( Person.prototype );
 	
 	//polymorphism
-	Employee.prototype.paysalary = function(){
-		return ("you have been paid " + this.salary);
+	Employee.prototype.CalculatePay = function(){
+		if (this.debt ===0){
+			return ("your Pay this month is  " + this.salary);
 		}
-	Employee.prototype.giveloan = function(loan){
-		if (loan<=this.salary){
+		else {
+			return ("Your pay this month is " + (this.salary - this.debt));
+		}
+
+		
+		}
+	Employee.prototype.GrantLoan = function(loan){
+		if (loan<=this.salary && this.debt===0.0){
 			var nextsalary= this.salary - loan
-			return ("loan given: " + loan + " your next salary will be " + nextsalary);
+			this.debt = this.debt + loan ;
+			return ("loan granted: " + loan + " your next salary will be " + nextsalary);
+			 
+			}
+			else{
+				return ("Cannot grant loan. You have a debt of " + this.debt) ; 
 			}
 		}
 		//abstraction
@@ -41,5 +54,6 @@ function Person(fname,lname, email){
 
 	var matthew = new Employee( "Matthew"," Korede", "matthew@hotmail.com", "Developer", 40000, "full-employment" );
  
-matthew.paysalary();
-matthew.giveloan(15000);
+matthew.CalculatePay();
+matthew.GrantLoan(15000);
+matthew.GrantLoan(15000);
