@@ -1,0 +1,23 @@
+{
+  "name": "Home-Sessions",
+  "version": "1.0.0",
+  "description": "Basic JavaScript project for demonstration of programming concepts",
+  "main": "app/library.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jasmine tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZainabOyewo/Home-Sessions.git"
+  },
+  "author": "Zainab Oyewo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZainabOyewo/Home-Sessions/issues"
+  },
+  "homepage": "https://github.com/ZainabOyewo/Home-Sessions#readme",
+  
+}
