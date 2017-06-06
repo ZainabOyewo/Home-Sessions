@@ -1,0 +1,28 @@
+{
+  "name": "Home-Sessions",
+  "version": "1.0.0",
+  "description": "Home-Sessions for the OOP repository task for real life problems",
+  "main": "app/library.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jasmine tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZainabOyewo/Home-Sessions.git"
+  },
+  "author": "Zainab Oyewo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZainabOyewo/Home-Sessions/issues"
+  },
+  "homepage": "https://github.com/ZainabOyewo/Home-Sessions#readme",
+  "dependencies": {
+    "jasmine": "^2.6.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.6.0"
+  }
+}
