@@ -1,0 +1,249 @@
+<html>
+<head>
+<style>
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+</style>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  
+  <!--slider images -->
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    
+    <img src="images/img1.jpg" style="width:100%">
+    <div class="text"><mark>Click for more Information</mark></div>
+    
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="images/img2.jpg" style="width:100%">
+    <div class="text"><mark>Click for more Information</mark></div>
+    
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="images/img3.jpg" style="width:100%">
+    <div class="text"><mark>Click for more Information</mark></div>
+    
+  </div>
+</div> <!--end of slider-->
+</br> 
+
+<!--slider dots-->  
+
+<div style="text-align:center; position: absolute; top: 500px; margin: 0px 0px 0px 650px;">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+     <!--end of dots-->  
+
+
+  <!--menu on the right side-->
+
+  <div id="Card Services" class="tabcontent" style="position:absolute; top:150px; left: 600;">
+  <h3>Card Services</h3>
+  <p></p>
+</div>
+
+<div id="Personal Banking" class="tabcontent" style="position:absolute; top:150px; left: 600;">
+  <h3>Personal Banking</h3>
+  <p></p> 
+</div>
+
+<div id="Business Banking" class="tabcontent" style="position:absolute; top:150px; left: 600;">
+  <h3>Business Banking</h3>
+  <p></p>
+</div>
+
+<div id="Products" class="tabcontent" style="position:absolute; top:150px; left: 600;">
+  <h3>Products</h3>
+  <p></p>
+</div>
+
+<div id="Services" class="tabcontent" style="position:absolute; top:150px; left: 600;">
+  <h3>Services</h3>
+  <p></p>
+</div>
+
+
+<div class="tab" style="position:absolute; left: 900; top:150px;">
+  <button class="tablinks" onmouseover="openCity(event, 'Card Services')" onmouseout="CloseCity(event, 'Card Services')" >Card Services</button>
+  
+  <button class="tablinks" onmouseover="openCity(event, 'Personal Banking')"  onmouseout="CloseCity(event, 'Personal Banking')">Personal Banking</button>
+  
+  <button class="tablinks" onmouseover="openCity(event, 'Business Banking')"  onmouseout="CloseCity(event, 'Business Banking')">Business Banking</button>
+  
+  <button class="tablinks" onmouseover="openCity(event, 'Products')"  onmouseout="CloseCity(event, 'Products')">Products</button>
+  
+  <button class="tablinks" onmouseover="openCity(event, 'Services')"  onmouseout="CloseCity(event, 'Services')">Services</button>
+</div>
+
+<script>
+function CloseCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+             
+           }
+                   
+        }
+           
+</script>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+//document.getElementById("defaultOpen").click();
+</script>
+
+<!--end of menu on right side-->  
+
+<!--top navigation--> 
+ <div class="topnav" id="myTopnav">
+  <a href="#home">About Bank</a>
+  <a href="#news">sunsidiaries</a>
+  <a href="#contact">Investor Information</a>
+  <a href="#about">Corporate Social Responsibility</a>
+  <a href="#about">Careers</a>
+  <a href="#about">Media</a>  
+
+    <!--search bar-->   
+    <input type="text" name="search" placeholder="Search.." style= "margin : 5px 0px 0px 25px;">
+    <!--end of search bar-->
+   
+</div> 
+<!--end of top navigation-->
+
+
+<!--GTLOGO-->
+ <div class="logo">
+<a href="#home"> </a>
+
+ </div>
+  <!--end of gt logo-->
+
+<!-- scriptfor slider-->  
+<script>
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex> slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+  <!--end of script for slider-->
+
+  <!--second rightside tab-->
+  <div class="tab2" style="position:absolute; left: 900; top:400px;">
+  <button class="tablinks2" onclick="openbusiness(event, 'Business')" id="defaultOpen">Business</button>
+  <button class="tablinks2" onclick="openbusiness(event, 'Personal')">Personal</button>
+  
+</div>
+
+<div id="Business" class="tabcontent2" style="position:absolute; left: 900; top:460px;">
+ <button style="background-color: black; color: white; margin:10px 25px 5px 5px;">Login</button>
+  <button style="background-color: black; color: white; margin:10px 25px 5px 5px;">Register</button>
+</div>
+
+<div id="Personal" class="tabcontent2" style="position:absolute; left: 900; top:460px;">
+  <button style="background-color: black; color: white; margin:10px 25px 5px 5px;">Login</button>
+  <button style="background-color: black; color: white; margin:10px 25px 5px 5px;">Register</button>
+  
+</div>
+
+
+
+<script>
+function openbusiness(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent2");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks2");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<!--end of second rightside tab-->
+
+<!--bottom header-->
+
+<button style="background-color: #696969; color: white; position:absolute; left: 900; top:515px; width: 30%; height: 35px; ">Link you BVN HERE!</button>
+<button style="background-color: #696969; color: white; position:absolute; left: 900; top:560px; width: 30%; height: 35px; ">Customer feedback Survery</button>
+
+<div style="background-color: #696969; height: 100px; position:absolute; top: 620px; width: 2000px;">
+  <div style="left: 300px; position:absolute;">
+  <img src="images/ndani-icon.png" class="icons">
+  
+  <img src="images/news-icon.png"  class="icons">
+  
+  <img src="images/complaint-icon.png"  class="icons">
+</br>
+  <a class="texticon">SME Market Hub</a>
+  <a class="texticon">GT In the News</a>
+  <a class="texticon">Complaints</a>
+  
+</div>
+</div>
+<!-- end of bottom header-->
+
+<!--footer links-->
+
+<div class="buttomnav" id="mybuttomnav">
+  <a href="#home">CONTACT US</a>
+  <a href="#news">WHITSLE BLOWER</a>
+  <a href="#contact">SITEMAP</a>
+  <a href="#about">TERMS</a>
+ 
+</div>
+
+<!--END OF footer -->
+
+</body>
+</html>

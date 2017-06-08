@@ -1,0 +1,265 @@
+* {box-sizing:border-box}
+
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 2000px;
+  position: fixed;
+  top:0px;
+}
+
+/*top navigation*/
+.topnav {
+  overflow: hidden;
+  top: 5px;
+  bottom: 0px;  
+  position: absolute;
+	display: block;
+	
+  
+}
+
+.topnav a {
+  
+  
+  color: #322C2E;
+  text-align: center;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 10px;
+  border-style: solid;
+  border-width: 0px 1px 0px 0px;
+}
+
+
+/*logo*/
+.logo {
+	display: block;
+	position: absolute; 
+	left:1200px;
+	width: 70px;
+	height: 65px;
+    overflow: hidden;
+    top: 15px;
+    background: url(images/gtlogo.jpg) no-repeat;
+}
+
+
+
+/* slider Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  top: 450px;
+  width: 100%;
+  text-align: center;
+}
+
+mark {
+    background-color: #00FF00;
+    color: black;
+    position: absolute;
+}
+
+
+/*search bar*/
+input[type=text] {
+	float: right;
+    width: 150px;
+    height: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 8px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 10px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+   
+}
+
+input[type=text]:focus {
+    width: 15%;
+}
+
+
+/* The slider dots indicatior */
+.dot {
+
+  height: 13px;
+  width: 13px;
+  top: 500px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: #bbb 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*first right tabmenu*/
+
+div.tab {
+    
+    border: 0px solid #ccc;
+    width: 30%;
+    height: 300px;
+    
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: #696969;
+    color: white;
+    padding: 11px 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 5px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: white;
+    color: #696969;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: white;
+    color: black;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: right;
+    background-color: white;
+    padding: 0px 12px;
+    border: 0px solid #ccc;
+    border-left: none;
+    height: 300px;
+    width: 300px;
+    display: none;
+
+}
+
+/*second right tabmenu*/
+/* Style the tab */
+div.tab2 {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: orange;
+    width: 30%;
+}
+
+/* Style the buttons inside the tab */
+div.tab2 button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 15px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab2 button:hover {
+    
+    
+}
+
+/* Create an active/current tablink class */
+div.tab2 button.active {
+     border: 5px solid white;
+    
+}
+
+/* Style the tab content */
+.tabcontent2 {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: orange;
+    width:30%;
+}
+
+/*button page icons*/
+
+.icons {
+	margin-right: 50px;
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+.texticon {
+	font-size: 10px;
+	color: white;
+	margin-right: 80px;
+	margin-top: 20px;
+	margin-left: 5px;
+}
+
+/*buttompage anvigation*/
+
+.buttomnav {
+  
+  top: 730px;
+  left:900px;
+  bottom: 0px;  
+  position: absolute;
+	display: block;
+	
+  
+}
+
+.buttomnav a {
+	
+  
+  color: black;
+  text-align: center;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 10px;
+  border-style: solid;
+  border-width: 0px 1px 0px 0px;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
