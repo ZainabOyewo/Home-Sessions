@@ -43,7 +43,7 @@ module.exports = {
   //Get each word stored and find the number of occurances
   for (var j = 0; j < datastorage.length; j++) {
     value = datastorage[j];
-    value = value.toString();
+    //value = value.toString();
     if (typeof WordObject[value] === "undefined") {
         WordObject[value] = 1;
     } else {
