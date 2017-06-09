@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>JSON/Atom Google Custom Search API On Andela site</title>
+  </head>
+  <body>
+    
+    <div id="content"></div>
+    <script>
+
+      function hndlr(response) {
+      for (var i = 0; i < response.items.length; i++) {
+        var item = response.items[i];
+
+        // in production code, item.htmlTitle should have the HTML entities escaped.
+        document.getElementById("content").innerHTML += "<br>" + item.htmlTitle + "<br>";
+
+      }
+    }
+    </script>
+
+
+    <script src="https://www.googleapis.com/customsearch/v1?key=AIzaSyBMDlGwdqRszbe7ecYhB9r2enHOsMib_dQ&amp;cx=002884399033073823563:oqc2rewjohw&amp;q=Developer&amp;callback=hndlr">     // Google custom search to search for the word "Developer" from Andela.com. CX is the search engine ID define for the particular site chosen. In this case, Andela.com
+    </script>
+
+  </body>
+</html>

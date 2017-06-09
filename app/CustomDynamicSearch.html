@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>JSON/Atom Google Custom Search API On Andela site</title>
+  </head>
+  <body>
+    
+
+    <!-- google SearchBox for Andela site-->
+    <h2> Andela.com</h2>
+    <div class="sidebar">
+    Enter your search word:
+    <gcse:searchbox></gcse:searchbox>
+    </div>
+    <div class="main-content">
+      
+      <gcse:searchresults></gcse:searchresults>
+    </div>
+
+
+
+
+<script>
+(function() {
+  var cx = '002884399033073823563:oqc2rewjohw';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+
+    
+
+  </body>
+</html>
